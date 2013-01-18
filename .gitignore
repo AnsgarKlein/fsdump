@@ -1,0 +1,3 @@
+
+#ignore temp files (like created by gedit)
+*~
