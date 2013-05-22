@@ -1,12 +1,7 @@
-You should compile fsdump with a decently up-to-date Vala Compiler (valac),
-which is available at git://git.gnome.org/vala
+You should compile fsdump with an up-to-date Go Compiler,
+which is available at https://code.google.com/p/go/
 
-Many Distribution already offer a version of the Vala Compiler, but this
-version probably is super outdated.
-
-If you use Ubuntu you can add a Vala ppa:
-ppa:vala-team/ppa
-(The package you need is called valac)
+(source as well as pre-compiled binaries are available)
 
 
 If you have all dependencies installed, install with:

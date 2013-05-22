@@ -1,6 +1,6 @@
-CC		=	valac
-SOURCES		+=	src/*.vala
-PACKAGES	+=	--pkg gio-2.0
+CC		=	go
+SOURCES		+=	src/*.go
+PACKAGES	+=	
 CFLAGS		+=	$(PACKAGES)
 
 BINARYDIR	+=	build/
@@ -8,14 +8,7 @@ BINARY		+=	fsdump
 
 
 
-
-all: CFLAGS += -X -O3
 all: $(BINARYDIR)$(BINARY)
-
-debug: CFLAGS += --debug
-debug: $(BINARYDIR)$(BINARY)
-
-
 
 
 install:
@@ -28,7 +21,5 @@ clean:
 	rm $(BINARYDIR)$(BINARY)
 
 
-
-
 $(BINARYDIR)$(BINARY): $(SOURCES)
-	$(CC) $(CFLAGS) $(SOURCES) -o $(BINARYDIR)$(BINARY) 
+	$(CC) build -o $(BINARYDIR)$(BINARY) $(CFLAGS) $(SOURCES)
